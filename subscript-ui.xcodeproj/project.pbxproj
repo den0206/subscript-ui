@@ -3,23 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A25362624F9264E003A0BC0 /* HomeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25362524F9264E003A0BC0 /* HomeVIewModel.swift */; };
+		3A25362824F92E46003A0BC0 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25362724F92E46003A0BC0 /* TopMoviePreview.swift */; };
 		3A4B672724F91F87003EA34A /* subscript_uiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B672624F91F87003EA34A /* subscript_uiApp.swift */; };
 		3A4B672924F91F87003EA34A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B672824F91F87003EA34A /* ContentView.swift */; };
 		3A4B672B24F91F88003EA34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B672A24F91F88003EA34A /* Assets.xcassets */; };
 		3A4B672E24F91F88003EA34A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B672D24F91F88003EA34A /* Preview Assets.xcassets */; };
+		3A4B673624F9203B003EA34A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B673524F9203B003EA34A /* HomeView.swift */; };
+		3A4B673B24F92217003EA34A /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4B673A24F92217003EA34A /* KingfisherSwiftUI */; };
+		3A4B673F24F92297003EA34A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B673E24F92297003EA34A /* Movie.swift */; };
+		3A4B674124F922DC003EA34A /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B674024F922DC003EA34A /* StandardHomeMovie.swift */; };
+		3A4B674424F92349003EA34A /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B674324F92349003EA34A /* GlobalHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A25362524F9264E003A0BC0 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
+		3A25362724F92E46003A0BC0 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		3A4B672324F91F87003EA34A /* subscript-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "subscript-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4B672624F91F87003EA34A /* subscript_uiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscript_uiApp.swift; sourceTree = "<group>"; };
 		3A4B672824F91F87003EA34A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A4B672A24F91F88003EA34A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4B672D24F91F88003EA34A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A4B672F24F91F88003EA34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4B673524F9203B003EA34A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A4B673E24F92297003EA34A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3A4B674024F922DC003EA34A /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
+		3A4B674324F92349003EA34A /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +40,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4B673B24F92217003EA34A /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A25362424F92630003A0BC0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A25362524F9264E003A0BC0 /* HomeVIewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3A4B671A24F91F87003EA34A = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				3A4B672624F91F87003EA34A /* subscript_uiApp.swift */,
+				3A4B673824F9204A003EA34A /* Model */,
+				3A25362424F92630003A0BC0 /* ViewModel */,
+				3A4B673724F92043003EA34A /* View */,
+				3A4B674224F92319003EA34A /* Extensions */,
 				3A4B672824F91F87003EA34A /* ContentView.swift */,
 				3A4B672A24F91F88003EA34A /* Assets.xcassets */,
 				3A4B672F24F91F88003EA34A /* Info.plist */,
@@ -67,6 +93,32 @@
 				3A4B672D24F91F88003EA34A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A4B673724F92043003EA34A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B673524F9203B003EA34A /* HomeView.swift */,
+				3A4B674024F922DC003EA34A /* StandardHomeMovie.swift */,
+				3A25362724F92E46003A0BC0 /* TopMoviePreview.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A4B673824F9204A003EA34A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B673E24F92297003EA34A /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A4B674224F92319003EA34A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A4B674324F92349003EA34A /* GlobalHelpers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +137,9 @@
 			dependencies = (
 			);
 			name = "subscript-ui";
+			packageProductDependencies = (
+				3A4B673A24F92217003EA34A /* KingfisherSwiftUI */,
+			);
 			productName = "subscript-ui";
 			productReference = 3A4B672324F91F87003EA34A /* subscript-ui.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 3A4B671A24F91F87003EA34A;
+			packageReferences = (
+				3A4B673924F92217003EA34A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3A4B672424F91F87003EA34A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4B673624F9203B003EA34A /* HomeView.swift in Sources */,
 				3A4B672924F91F87003EA34A /* ContentView.swift in Sources */,
+				3A4B674424F92349003EA34A /* GlobalHelpers.swift in Sources */,
+				3A4B674124F922DC003EA34A /* StandardHomeMovie.swift in Sources */,
+				3A4B673F24F92297003EA34A /* Movie.swift in Sources */,
+				3A25362824F92E46003A0BC0 /* TopMoviePreview.swift in Sources */,
 				3A4B672724F91F87003EA34A /* subscript_uiApp.swift in Sources */,
+				3A25362624F9264E003A0BC0 /* HomeVIewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A4B673924F92217003EA34A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A4B673A24F92217003EA34A /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4B673924F92217003EA34A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A4B671B24F91F87003EA34A /* Project object */;
 }
