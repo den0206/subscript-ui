@@ -11,7 +11,6 @@ import KingfisherSwiftUI
 struct TopMoviePreview: View {
     
     //MARK: - Property
-    
     var movie : Movie
     
     var body: some View {
@@ -28,6 +27,7 @@ struct TopMoviePreview: View {
                     ForEach(movie.categories, id : \.self) {category in
                         HStack {
                             Text(category)
+                                .font(.footnote)
                             
                             if !isCategoryLast(category: category) {
                                 Image(systemName: "circle.fill")
@@ -37,9 +37,40 @@ struct TopMoviePreview: View {
                         }
                     }
                 }
-                Text("Buttons")
-               
+                .padding(.bottom,5)
+                /// buttons
+                HStack {
+                    Spacer()
+                    
+                    SmallVertivalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                        /// list action
+                        
+                    }
+                    Spacer()
+
+                    WhiteButton(text: "Play", imageName: "play.fill") {
+                        ///
+                    }
+                    .frame(width: 120)
+                    
+                    Spacer()
+
+                    
+                    SmallVertivalButton(text: "info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
+                        /// info action
+                    }
+                    
+                    Spacer()
+
+                }
             }
+            /// gradient
+            .background(
+                LinearGradient.blackOpacityGradient
+                /// gradient from half area
+                    .padding(.top, 300)
+            )
+                    
         }
         .foregroundColor(.white)
     }
@@ -64,6 +95,12 @@ extension TopMoviePreview {
 
 struct TopMoviePreview_Previews: PreviewProvider {
     static var previews: some View {
-        TopMoviePreview(movie: exampleMovie1)
+        
+        ZStack {
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            TopMoviePreview(movie: exampleMovie1)
+        }
+        
     }
 }
