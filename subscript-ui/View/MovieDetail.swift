@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct MovieDetail: View {
     
     var movie : Movie
@@ -15,11 +17,11 @@ struct MovieDetail: View {
     
     var body: some View {
         ZStack {
+            /// backGround Color
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                
                 /// close Button
                 HStack {
                     Spacer()
@@ -48,6 +50,46 @@ struct MovieDetail: View {
                                 .bold()
                                 .font(.headline)
                         }
+                        
+                        PlayButton(text: "Play", imageName: "play.fill", backGroundColor: Color.red) {
+                            return
+                        }
+                        .padding(.horizontal, 10)
+                        
+                        CurrentEpisodeInfomation(movie: movie)
+                        
+                        CastInfo(movie: movie)
+                        
+                        /// buttons
+                        HStack(spacing : 60) {
+                            
+                            SmallVertivalButton(text: "My list", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                                
+                            }
+                            SmallVertivalButton(text: "rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: true) {
+                                
+                            }
+                            SmallVertivalButton(text: "Share", isOnImage: "square.and.arrow.up", isOffImage: "plus", isOn: true) {
+                                
+                            }
+                            
+                            Spacer()
+                        }
+                        .padding(.leading,20)
+                        
+                        
+                        
+                        /// custom Tab & Views
+                        CustomTabSwitcher(tabs: [.episode,.trailers,.morelike])
+                        
+              
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                     }
                 }
                 
@@ -64,9 +106,11 @@ struct MovieDetail_Previews: PreviewProvider {
     }
 }
 
+
 struct MovieInfoSubLine: View {
-    
+    //MARK: - Property
     var movie : Movie
+    
     var body: some View {
         HStack(spacing: 20) {
             Image(systemName: "hand.thumbsup.fill")
@@ -80,6 +124,9 @@ struct MovieInfoSubLine: View {
         }
         .foregroundColor(.gray)
         .padding(.vertical, 6)
+        
+      
+        
         
         
     }
@@ -100,5 +147,51 @@ struct RatingView: View {
         }
         .frame(width: 50, height: 20)
         
+    }
+}
+
+struct CastInfo: View {
+    var movie : Movie
+    
+    var body: some View {
+        VStack(spacing: 3){
+            HStack {
+                Text("Creators : \(movie.creators)")
+                Spacer()
+            }
+            
+            HStack {
+                Text("Cast : \(movie.cast)")
+                Spacer()
+                
+            }
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.vertical, 10)
+    }
+}
+
+struct CurrentEpisodeInfomation: View {
+    
+    var movie : Movie
+    
+    var body: some View {
+        Group {
+            HStack {
+                Text(movie.episodeInfoDisplay)
+                    .bold()
+                Spacer()
+                
+            }
+            .padding(.vertical, 4)
+            
+            HStack {
+                Text(movie.episodeDescriptionDisplay)
+                    .font(.subheadline)
+                Spacer()
+            }
+            
+        }
     }
 }
