@@ -20,6 +20,8 @@
 		3A4B674424F92349003EA34A /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B674324F92349003EA34A /* GlobalHelpers.swift */; };
 		3A4FF58424F9F0B2004A6EBD /* SmallVertivalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FF58324F9F0B2004A6EBD /* SmallVertivalButton.swift */; };
 		3A4FF58924F9F64D004A6EBD /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FF58824F9F64D004A6EBD /* WhiteButton.swift */; };
+		3AC43D5624FA1B4C00EE0AAA /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */; };
+		3AC43D5824FA209900EE0AAA /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5724FA209900EE0AAA /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		3A4B674324F92349003EA34A /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		3A4FF58324F9F0B2004A6EBD /* SmallVertivalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVertivalButton.swift; sourceTree = "<group>"; };
 		3A4FF58824F9F64D004A6EBD /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		3AC43D5724FA209900EE0AAA /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				3A4B673524F9203B003EA34A /* HomeView.swift */,
 				3A4B674024F922DC003EA34A /* StandardHomeMovie.swift */,
 				3A25362724F92E46003A0BC0 /* TopMoviePreview.swift */,
+				3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4B673E24F92297003EA34A /* Movie.swift */,
+				3AC43D5724FA209900EE0AAA /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4B673624F9203B003EA34A /* HomeView.swift in Sources */,
+				3AC43D5824FA209900EE0AAA /* Episode.swift in Sources */,
 				3A4B672924F91F87003EA34A /* ContentView.swift in Sources */,
 				3A4B674424F92349003EA34A /* GlobalHelpers.swift in Sources */,
 				3A4B674124F922DC003EA34A /* StandardHomeMovie.swift in Sources */,
@@ -220,6 +227,7 @@
 				3A4FF58424F9F0B2004A6EBD /* SmallVertivalButton.swift in Sources */,
 				3A25362624F9264E003A0BC0 /* HomeVIewModel.swift in Sources */,
 				3A4FF58924F9F64D004A6EBD /* WhiteButton.swift in Sources */,
+				3AC43D5624FA1B4C00EE0AAA /* MovieDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
