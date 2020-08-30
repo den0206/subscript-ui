@@ -12,9 +12,12 @@ struct Episode : Identifiable {
     
     var name : String
     var season : Int
+    var episodeNumber : Int
     var thumbnailImageUrlString : String
     var description : String
     var length : Int
+    
+    var videoUrl : URL
     
     var thubnaulUrl : URL {
         return URL(string: thumbnailImageUrlString)!

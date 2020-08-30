@@ -15,86 +15,132 @@ struct MovieDetail: View {
     
     let screen = UIScreen.main.bounds
     
+    /// for Overlay This VIew
+    @State private var showScreenPicker = false
+    @State private var selectedSeason = 1
+    
     var body: some View {
+        
         ZStack {
             /// backGround Color
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                /// close Button
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "xmark.circle")
-                            .font(.system(size: 28))
-                        
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                }
-                .padding(.horizontal,22)
-                
-                ///
-                
-                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
-                    VStack {
-                        StandardHomeMovie(movie: movie)
-                            .frame(width: screen.width / 2.5)
-                        
-                        MovieInfoSubLine(movie: movie)
-                        
-                        if movie.promotionHeadLine != nil {
-                            Text(movie.promotionHeadLine!)
-                                .bold()
-                                .font(.headline)
-                        }
-                        
-                        PlayButton(text: "Play", imageName: "play.fill", backGroundColor: Color.red) {
-                            return
-                        }
-                        .padding(.horizontal, 10)
-                        
-                        CurrentEpisodeInfomation(movie: movie)
-                        
-                        CastInfo(movie: movie)
-                        
-                        /// buttons
-                        HStack(spacing : 60) {
+            ZStack {
+                VStack {
+                    /// close Button
+                    HStack {
+                        Spacer()
+                        Button(action: {
                             
-                            SmallVertivalButton(text: "My list", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
-                                
-                            }
-                            SmallVertivalButton(text: "rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: true) {
-                                
-                            }
-                            SmallVertivalButton(text: "Share", isOnImage: "square.and.arrow.up", isOffImage: "plus", isOn: true) {
-                                
-                            }
+                        }, label: {
+                            Image(systemName: "xmark.circle")
+                                .font(.system(size: 28))
                             
-                            Spacer()
-                        }
-                        .padding(.leading,20)
-                        
-                        
-                        
-                        /// custom Tab & Views
-                        CustomTabSwitcher(tabs: [.episode,.trailers,.morelike],movie: exampleMovie1)
-                        
-              
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        })
+                        .buttonStyle(PlainButtonStyle())
                     }
+                    .padding(.horizontal,22)
+                    
+                    ///
+                    
+                    ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+                        VStack {
+                            StandardHomeMovie(movie: movie)
+                                .frame(width: screen.width / 2.5)
+                            
+                            MovieInfoSubLine(movie: movie)
+                            
+                            if movie.promotionHeadLine != nil {
+                                Text(movie.promotionHeadLine!)
+                                    .bold()
+                                    .font(.headline)
+                            }
+                            
+                            PlayButton(text: "Play", imageName: "play.fill", backGroundColor: Color.red) {
+                                return
+                            }
+                            .padding(.horizontal, 10)
+                            
+                            CurrentEpisodeInfomation(movie: movie)
+                            
+                            CastInfo(movie: movie)
+                            
+                            /// buttons
+                            HStack(spacing : 60) {
+                                
+                                SmallVertivalButton(text: "My list", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                                    
+                                }
+                                SmallVertivalButton(text: "rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: true) {
+                                    
+                                }
+                                SmallVertivalButton(text: "Share", isOnImage: "square.and.arrow.up", isOffImage: "plus", isOn: true) {
+                                    
+                                }
+                                
+                                Spacer()
+                            }
+                            .padding(.leading,20)
+                            
+                            
+                            
+                            /// custom Tab & Views
+                            CustomTabSwitcher(tabs: [.episode,.trailers,.morelike],movie: movie,showScreenPicker: $showScreenPicker, selectedSeason: $selectedSeason)
+                            
+         
+                            
+                        }
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
             }
+            
+            
+            if showScreenPicker {
+                
+                Group {
+                    
+                    Color.black.opacity(0.9)
+                    
+                    VStack(spacing: 40){
+                        Spacer()
+                        
+                        
+                        /// episode
+                        ForEach(0..<(movie.numberOfSeasons ?? 0 )) { index in
+                            Button(action: {
+                                self.selectedSeason = index + 1
+                                self.showScreenPicker = false
+                            }, label: {
+                                Text("Season \(index + 1)")
+                                    .foregroundColor(selectedSeason == index + 1 ? .white : .gray)
+                                    .font(.title2)
+                                    .bold()
+                            })
+                            
+                        }
+                        
+                        Spacer()
+                        /// close Button
+                        
+                        Button(action: {
+                            showScreenPicker = false
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 40))
+                                .scaleEffect(x: 1.1)
+                        })
+                        .padding(.bottom,30)
+                    }
+                    
+                }
+                .edgesIgnoringSafeArea(.all)
+                
+            }
+            
         }
         .foregroundColor(.white)
     }

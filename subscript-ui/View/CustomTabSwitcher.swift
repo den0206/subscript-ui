@@ -20,11 +20,16 @@ enum CustomTab : String {
 struct CustomTabSwitcher: View {
     
     @State private var currentTab :  CustomTab = .episode
+ 
     
     //MARK: - Property
     
     var tabs : [CustomTab]
     var movie : Movie
+    
+    
+    @Binding var showScreenPicker : Bool
+    @Binding var selectedSeason : Int
     
     var body: some View {
  
@@ -59,7 +64,7 @@ struct CustomTabSwitcher: View {
             switch currentTab {
             
             case .episode :
-                Text("episode")
+                EpisodeView(episodes: movie.episods ?? [], showScreenPicker: $showScreenPicker, selectedSeason: $selectedSeason)
             case .trailers :
                 TrailerListView(trailers: movie.trailers)
             case .morelike :
@@ -89,7 +94,8 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            CustomTabSwitcher(tabs: [.episode,.trailers, .morelike], movie: exampleMovie1)
+            CustomTabSwitcher(tabs: [.episode,.trailers, .morelike], movie: exampleMovie1,showScreenPicker: .constant(false),selectedSeason: .constant(1))
+           
 
         }
     }

@@ -27,7 +27,7 @@ struct Movie : Identifiable{
     var creators : String
     var cast : String
 
-    var episode : [Episode]?
+    var episods : [Episode]?
     var promotionHeadLine : String?
     
     var moreLikeThisMoives : [Movie]

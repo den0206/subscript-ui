@@ -23,6 +23,7 @@
 		3A4FF58924F9F64D004A6EBD /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FF58824F9F64D004A6EBD /* PlayButton.swift */; };
 		3AC43D5624FA1B4C00EE0AAA /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */; };
 		3AC43D5824FA209900EE0AAA /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5724FA209900EE0AAA /* Episode.swift */; };
+		3AD1D24524FB87CB00C2BB4A /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1D24424FB87CB00C2BB4A /* EpisodeView.swift */; };
 		3AE64FAC24FB6A09009FF386 /* MoreLikeThisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE64FAB24FB6A09009FF386 /* MoreLikeThisView.swift */; };
 		3AE64FB024FB6FC5009FF386 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE64FAF24FB6FC5009FF386 /* Trailer.swift */; };
 		3AE64FB324FB7030009FF386 /* SwiftUIVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE64FB224FB7030009FF386 /* SwiftUIVideoView.swift */; };
@@ -48,6 +49,7 @@
 		3A4FF58824F9F64D004A6EBD /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		3AC43D5724FA209900EE0AAA /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		3AD1D24424FB87CB00C2BB4A /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 		3AE64FAB24FB6A09009FF386 /* MoreLikeThisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThisView.swift; sourceTree = "<group>"; };
 		3AE64FAF24FB6FC5009FF386 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		3AE64FB224FB7030009FF386 /* SwiftUIVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVideoView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3A3813D724FA410C000643AA /* CustomTabSwitcher.swift */,
 				3AE64FAB24FB6A09009FF386 /* MoreLikeThisView.swift */,
 				3AE64FB624FB7415009FF386 /* TrailerListView.swift */,
+				3AD1D24424FB87CB00C2BB4A /* EpisodeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				3AE64FB524FB71C8009FF386 /* VideoPreviewImageView.swift in Sources */,
 				3A4B674124F922DC003EA34A /* StandardHomeMovie.swift in Sources */,
 				3A4B673F24F92297003EA34A /* Movie.swift in Sources */,
+				3AD1D24524FB87CB00C2BB4A /* EpisodeView.swift in Sources */,
 				3A25362824F92E46003A0BC0 /* TopMoviePreview.swift in Sources */,
 				3A4B672724F91F87003EA34A /* subscript_uiApp.swift in Sources */,
 				3A4FF58424F9F0B2004A6EBD /* SmallVertivalButton.swift in Sources */,

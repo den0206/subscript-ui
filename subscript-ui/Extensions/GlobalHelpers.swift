@@ -27,15 +27,15 @@ var exampleTrailers : [Trailer] {
     return [exampleTrailer1,exampleTrailer2,exampleTrailer3,exampleTrailer4,exampleTrailer5]
 }
 
-
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "Dark", thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
     categories: ["excitein","Dystopian", "Wifi"],
-    year: 2020,rating: "TV",numberOfSeasons: 1,
+    year: 2020,rating: "TV",numberOfSeasons: 3,
     defaultEpisodeInfo:  exampleEpisodeInfo1,
     creators : "me",
     cast : "Me",
+    episods: [exampleEpisode1,exampleEpisode2],
     promotionHeadLine: "promotion",
     moreLikeThisMoives: [exampleMovie2,exampleMovie3], trailers: exampleTrailers
 )
@@ -102,6 +102,31 @@ var exampleMovies : [Movie] {
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "sfdafasdfadfadfa", description: "afsfasfasdfada", season: 2, episode: 1)
 let exampleEpisodeInfo2 = CurrentEpisodeInfo(episodeName: "fdafda", description: "fsf", season: 2, episode: 1)
+
+//MARK: - Episode obj
+
+let exampleEpisode1 = Episode(name: "dfasdfa", season: 1,
+                             episodeNumber: 1,
+                             thumbnailImageUrlString: creatExampleImageUrl(Int: 6).absoluteString,
+                             description: "adfadfa", length: 53,
+                             videoUrl: exampleVideoUrl
+)
+
+let exampleEpisode2 = Episode(name: "sdfasd", season: 1,
+                             episodeNumber: 2,
+                             thumbnailImageUrlString: creatExampleImageUrl(Int: 5).absoluteString,
+                             description: "adfadfa", length: 47,
+                             videoUrl: exampleVideoUrl
+)
+
+let exampleEpisode3 = Episode(name: "asfsfsa", season: 1,
+                             episodeNumber: 3,
+                             thumbnailImageUrlString: creatExampleImageUrl(Int: 8).absoluteString,
+                             description: "adfadfa", length: 53,
+                             videoUrl: exampleVideoUrl
+)
+
+
 
 
 extension LinearGradient {
