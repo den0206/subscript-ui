@@ -24,6 +24,7 @@ struct CustomTabSwitcher: View {
     //MARK: - Property
     
     var tabs : [CustomTab]
+    var movie : Movie
     
     var body: some View {
  
@@ -60,9 +61,9 @@ struct CustomTabSwitcher: View {
             case .episode :
                 Text("episode")
             case .trailers :
-                Text("Trailers")
+                TrailerListView(trailers: movie.trailers)
             case .morelike :
-                Text("more")
+                MoreLikeThisView(movies: movie.moreLikeThisMoives)
            
             }
           
@@ -88,7 +89,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            CustomTabSwitcher(tabs: [.episode,.trailers, .morelike])
+            CustomTabSwitcher(tabs: [.episode,.trailers, .morelike], movie: exampleMovie1)
 
         }
     }

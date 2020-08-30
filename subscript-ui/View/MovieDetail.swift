@@ -80,7 +80,7 @@ struct MovieDetail: View {
                         
                         
                         /// custom Tab & Views
-                        CustomTabSwitcher(tabs: [.episode,.trailers,.morelike])
+                        CustomTabSwitcher(tabs: [.episode,.trailers,.morelike],movie: exampleMovie1)
                         
               
                         
