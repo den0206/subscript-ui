@@ -21,6 +21,7 @@
 		3A4B674424F92349003EA34A /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B674324F92349003EA34A /* GlobalHelpers.swift */; };
 		3A4FF58424F9F0B2004A6EBD /* SmallVertivalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FF58324F9F0B2004A6EBD /* SmallVertivalButton.swift */; };
 		3A4FF58924F9F64D004A6EBD /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FF58824F9F64D004A6EBD /* PlayButton.swift */; };
+		3A9C159724FD1E3E00718F13 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C159624FD1E3E00718F13 /* HomeStack.swift */; };
 		3AC43D5624FA1B4C00EE0AAA /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */; };
 		3AC43D5824FA209900EE0AAA /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43D5724FA209900EE0AAA /* Episode.swift */; };
 		3AD1D24524FB87CB00C2BB4A /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1D24424FB87CB00C2BB4A /* EpisodeView.swift */; };
@@ -47,6 +48,7 @@
 		3A4B674324F92349003EA34A /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		3A4FF58324F9F0B2004A6EBD /* SmallVertivalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVertivalButton.swift; sourceTree = "<group>"; };
 		3A4FF58824F9F64D004A6EBD /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		3A9C159624FD1E3E00718F13 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		3AC43D5724FA209900EE0AAA /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		3AD1D24424FB87CB00C2BB4A /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				3AE64FB124FB701A009FF386 /* VIdeoView */,
 				3A4FF58524F9F5BB004A6EBD /* Buttons */,
 				3A4B673524F9203B003EA34A /* HomeView.swift */,
+				3A9C159624FD1E3E00718F13 /* HomeStack.swift */,
 				3A4B674024F922DC003EA34A /* StandardHomeMovie.swift */,
 				3A25362724F92E46003A0BC0 /* TopMoviePreview.swift */,
 				3AC43D5524FA1B4C00EE0AAA /* MovieDetail.swift */,
@@ -258,6 +261,7 @@
 				3A25362824F92E46003A0BC0 /* TopMoviePreview.swift in Sources */,
 				3A4B672724F91F87003EA34A /* subscript_uiApp.swift in Sources */,
 				3A4FF58424F9F0B2004A6EBD /* SmallVertivalButton.swift in Sources */,
+				3A9C159724FD1E3E00718F13 /* HomeStack.swift in Sources */,
 				3AE64FB024FB6FC5009FF386 /* Trailer.swift in Sources */,
 				3A3813D824FA410C000643AA /* CustomTabSwitcher.swift in Sources */,
 				3A25362624F9264E003A0BC0 /* HomeVIewModel.swift in Sources */,

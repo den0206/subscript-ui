@@ -19,6 +19,8 @@ struct MovieDetail: View {
     @State private var showScreenPicker = false
     @State private var selectedSeason = 1
     
+    @Binding var movieDetailsToshow : Movie?
+    
     var body: some View {
         
         ZStack {
@@ -32,6 +34,8 @@ struct MovieDetail: View {
                     HStack {
                         Spacer()
                         Button(action: {
+                            
+                            self.movieDetailsToshow = nil
                             
                         }, label: {
                             Image(systemName: "xmark.circle")
@@ -148,7 +152,7 @@ struct MovieDetail: View {
 
 struct MovieDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail(movie: exampleMovie1)
+        MovieDetail(movie: exampleMovie1, movieDetailsToshow: .constant(nil))
     }
 }
 
